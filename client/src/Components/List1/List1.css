@@ -1,0 +1,215 @@
+/* General Styling */
+.list-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 66vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container-list {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.h5-list {
+    font-size: 1rem;
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Filter Controls */
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-controls input,
+.filter-controls select,
+.filter-controls button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-controls input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-controls select {
+    min-width: 120px;
+}
+
+.filter-controls button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Pagination Buttons */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* User Table */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    /* display: block; */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action Buttons */
+.action-link,
+.delete-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.delete-link {
+    color: red;
+    font-weight: bold;
+}
+
+.action-link:hover,
+.delete-link:hover {
+    opacity: 0.8;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 1024px) {
+    .list-section {
+        padding: 30px;
+    }
+
+    .filter-controls {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-controls input,
+    .filter-controls select {
+        width: 95%;
+    }
+
+    .user-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-list {
+        padding: 15px;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .user-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .pagination {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-list {
+        padding: 10px;
+    }
+
+    .list-section {
+        padding: 20px;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-controls input,
+    .filter-controls select,
+    .filter-controls button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .user-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .user-table th,
+    .user-table td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}

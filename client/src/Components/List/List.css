@@ -1,0 +1,132 @@
+/* General Styling */
+.admin-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    min-height: 66vh;
+}
+
+/* .container-adminManager {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.h5-adminManager {
+    font-size: 1rem;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-controls input, 
+.filter-controls select, 
+.filter-controls button {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-controls button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-controls button:hover {
+    background-color: #0056b3;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.user-table th,
+.user-table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.verified {
+    color: green;
+    font-weight: bold;
+}
+
+.blocked {
+    color: orange;
+    font-weight: bold;
+}
+
+.action-link,
+.delete-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.delete-link {
+    color: red;
+}
+
+.action-link:hover,
+.delete-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-adminManager {
+        padding: 15px;
+    }
+    .user-table th,
+    .user-table td {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+    .admin-section {
+        padding: 30px;
+    }
+    .filter-controls {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-adminManager {
+        padding: 10px;
+    }
+    .user-table th,
+    .user-table td {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+    .admin-section {
+        padding: 20px;
+    }
+    .filter-controls input, 
+    .filter-controls select, 
+    .filter-controls button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
